@@ -1,0 +1,157 @@
+
+
+
+/*Dashboard*/
+.dashShell {
+    width: auto;
+    border: 5px solid black;
+    height: 200px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    }
+
+.dashLeft {
+
+    font-family: cursive;
+    font-weight: bolder;
+    font-style: italic;
+    color: greenyellow;
+
+    }
+
+.dashPicL {
+    border-radius: 10px;
+    border: 2px solid darkgray;
+    box-shadow: 5px 5px;
+    width: 100px;
+    height: 100px;
+}
+
+.dashCenter {
+    margin-right: 150px;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+
+    }
+
+.dashRight {
+
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+
+    }
+
+.dashPic {
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 5px 5px;
+    width: 450px;
+    height: 175px;
+    }
+
+/*displayAll*/
+.banner {
+    width: auto;
+    height: auto;
+    font-family: cursive;
+    background-color: tan;
+    color: black;
+    border: 5px solid black;
+
+}
+.container {
+    width: auto;
+    height: auto;
+    font-family: cursive;
+    color: black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.details {
+    width: auto;
+    height: auto;
+    margin: 20px;
+    background-color: brown;
+    color: black;
+    border: 3px solid black;
+    box-shadow: 5px 10px;
+    border-radius: 10%;
+
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px;
+}
+
+
+
+/*calendar*/
+
+.container2 {
+    width: auto;
+    height: auto;
+    font-family: cursive;
+    color: black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.details2 {
+    width: 250px;
+    height: 300px;
+    margin: 5px;
+    background-color: burlywood;
+    color: black;
+    border: 3px solid black;
+    box-shadow: 5px 10px;
+    border-radius: 10%;
+    text-align: left;
+    padding: 0px 5px 5px 5px;
+
+}
+
+
+.btn2 {
+    width: 30px;
+    height: 20px;
+    background-color: black;
+    color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px; 
+    margin: 2px;
+}
+/* dish form */
+
+.details3 {
+    width: 400px;
+    height: 750px;
+    margin: 5px;
+    background-color: burlywood;
+    color: black;
+    border: 3px solid black;
+    box-shadow: 5px 10px;
+    border-radius: 10%;
+    padding: 20px;
+
+}
