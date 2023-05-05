@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link,useNavigate, useParams } from 'react-router-dom';
+import modernblack from '../images/modernblack.jpg';
+import Dashboard from '../dishes/Dashboard';
 
 
 const OneDish = (props) => {
@@ -22,24 +24,32 @@ const OneDish = (props) => {
     const deleteDish = (dishId) => {
         axios.delete('http://localhost:8000/api/allDishes/' + dishId)
         .then(res => {
-            navigate('/main')
+            navigate('/displayPage')
         })
         .catch(err => console.log(err))
     };
 
 
     return (
-        <div className='m-5 border border-dark rounded w-50 h-100 d-inline-block p-3 mb-2 bg-primary text-white w-25'>
-            <h2>Title: {dish.title}</h2>
+        <div className='container4' style={{
+            backgroundImage:`url(${modernblack})`
+        }}>
+            <Dashboard/>
+            <h1 style={{ backgroundImage: `url(${modernblack})`, color: 'white', fontFamily: 'cursive', fontWeight: 'bolder', fontSize: 'large'}}>Lets make this dish!!!</h1>
+            <Link className='btn4' to={`/displayPage`}>Dish Library</Link>
+        <div className='details4'>
+            <h2>{dish.title}</h2>
+            <br  /><br  />
             <h3>Feeds How Many?: {dish.servings}</h3>
             <h3>How long to prep?: {dish.prepTime}</h3>
             <h3>How long to cook?: {dish.cookTime}</h3>
-            <p>Description: {dish.description}</p>
-            <Link className='btn' to={`/updateDish/${dish._id}`}>Edit page</Link>
             <br  /><br  />
-            <Link className='btn' to={'/main'}>Home</Link>
+            <h4>Description: {dish.description}</h4>
             <br  /><br  />
-            <button onClick={(e)=>{deleteDish(dish._id)}} className='btn btn-danger'>Delete</button>
+            <br  /><br  />
+            <br  /><br  />
+            <button onClick={(e)=>{deleteDish(dish._id)}} className='btn3 btn-danger'>Delete this dish from my library</button>
+        </div>
         </div>
     )}
 

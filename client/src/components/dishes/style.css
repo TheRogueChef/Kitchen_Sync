@@ -5,7 +5,7 @@
 .dashShell {
     width: auto;
     border: 5px solid black;
-    height: 200px;
+    height: 250px;
     background-color: lightgrey;
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@
     font-family: cursive;
     font-weight: bolder;
     font-style: italic;
-    color: greenyellow;
+    color: red;
 
     }
 
@@ -30,7 +30,7 @@
 }
 
 .dashCenter {
-    margin-right: 150px;
+    margin-right: 80px;
     font-family: cursive;
     font-weight: bold;
     font-style: italic;
@@ -78,14 +78,14 @@
 }
 
 .details {
-    width: auto;
-    height: auto;
+    width: 200px;
+    height: 300px;
     margin: 20px;
-    background-color: brown;
+    background-color: rgb(137, 96, 96);
     color: black;
     border: 3px solid black;
-    box-shadow: 5px 10px;
-    border-radius: 10%;
+    box-shadow: 5px 5px;
+    border-radius: 5%;
 
 }
 
@@ -101,11 +101,9 @@
 
 
 
-/*calendar*/
-
 .container2 {
     width: auto;
-    height: auto;
+    height: 500px;
     font-family: cursive;
     color: black;
     border-left: 5px solid black;
@@ -120,11 +118,11 @@
     width: 250px;
     height: 300px;
     margin: 5px;
-    background-color: burlywood;
+    background-color: rgb(85, 85, 136);
     color: black;
     border: 3px solid black;
-    box-shadow: 5px 10px;
-    border-radius: 10%;
+    box-shadow: 5px 5px;
+    border-radius: 5%;
     text-align: left;
     padding: 0px 5px 5px 5px;
 
@@ -132,26 +130,93 @@
 
 
 .btn2 {
-    width: 30px;
-    height: 20px;
-    background-color: black;
-    color: antiquewhite;
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    color: black;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 2px 2px; 
     margin: 2px;
+    padding: 2px;
 }
+
 /* dish form */
 
 .details3 {
     width: 400px;
-    height: 750px;
+    height: 600px;
     margin: 5px;
-    background-color: burlywood;
+    background-color: rgb(135, 152, 222);
     color: black;
     border: 3px solid black;
-    box-shadow: 5px 10px;
-    border-radius: 10%;
+    box-shadow: 5px 5px;
+    border-radius: 5%;
     padding: 20px;
 
+}
+
+/* login/reg */
+.container3 {
+    width: auto;
+    height:750px;
+    font-family: cursive;
+    color: black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+/* showone */
+
+.container4 {
+    width: auto;
+    height: 1000px;
+    font-family: cursive;
+    color: black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+
+}
+
+.details4 {
+    width: 800px;
+    height: 600px;
+    margin-left: 350px;
+    margin-top: 50px;
+    background-color: rgb(135, 152, 222);
+    color: black;
+    border: 3px solid black;
+    box-shadow: 5px 5px;
+    border-radius: 5%;
+    padding: 20px;
+    align-self: center;
+
+}
+
+.btn3 {
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px; 
+    margin: 2px;
+    padding: 2px;
+}
+
+.btn4 {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(191, 20, 48);
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px; 
+    margin-top: 10px;
+    padding: 2px;
 }

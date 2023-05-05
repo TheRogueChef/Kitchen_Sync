@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import axios from 'axios';
 import { Link,useNavigate } from 'react-router-dom';
 import { Image } from 'react-bootstrap';
 import food1 from '../images/food1.jpg';
-import rusticplankstable from '../images/rusticplankstable.jpg';
+import blacktable from '../images/blacktable.jpg';
 import kitchensink2 from '../images/kitchensink2.jpg';
 
 const Dashboard = (props) => {
@@ -19,10 +19,10 @@ const Dashboard = (props) => {
     }
     return (
         <div className='dashShell' style={{
-            backgroundImage: `url(${rusticplankstable})`} } >
+            backgroundImage: `url(${blacktable})`} } >
             <div className='dashLeft'>
                 <Image className='dashPicL' src={kitchensink2} alt='...'/>
-                <h1>Kitchen Sync</h1>
+                <h1>Daily Dish</h1>
             </div>
             <div className='dashCenter'>
                 <Image className='dashPic' src={food1} alt='...' />
@@ -32,7 +32,7 @@ const Dashboard = (props) => {
                 <hr/>
                 <Link className='btn' to={'/newDish'}>New Dish</Link>    
                 <hr/>
-                <Link className='btn' to={'/allDishes'}>All Dishes</Link>          
+                <Link className='btn' target='blank' to={'https://www.foodnetwork.com/recipes'}>Dish Ideas</Link>          
             </div>
         </div>
     )

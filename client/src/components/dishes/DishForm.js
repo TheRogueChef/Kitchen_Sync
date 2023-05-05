@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link,useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import rusticplankstable from '../images/rusticplankstable.jpg';
+import modernblack from '../images/modernblack.jpg';
 
 const DishForm = (props) => {
     const [errors, setErrors] = useState ({})
@@ -25,11 +25,9 @@ const DishForm = (props) => {
         axios.post('http://localhost:8000/api/newDish', dish)
             .then((res) => {
                 setDish({title:"", servings:0, prepTime: "", cookTime: "", description:""})
-                // window.location.reload()
-                navigate('/main')
+                navigate('/displayPage')
             })
             .catch((err) => {
-                // console.log(err.response.data.error.errors);
                 setErrors(err.response.data.error.errors)
             })
     }
@@ -37,12 +35,12 @@ const DishForm = (props) => {
 
 
     return (
-        <div className='container'  style={{
-            backgroundImage: `url(${rusticplankstable})`} }>
+        <div className='container3'  style={{
+            backgroundImage: `url(${modernblack})`} }>
         <div className='details3'>
             <form className='w-25' onSubmit={submitHandler}>
                 <h1>Create a New Dish</h1>
-                <br /> <br />
+
                 <label className='form-label'>Title: </label>
                 <input className='form-control' type="text" onChange={handleInputChange} value={dish.title} name='title' />
                 {
@@ -50,7 +48,7 @@ const DishForm = (props) => {
                     <p className='text-danger'>{errors.title.message}</p>:
                     null
                 }
-                <br /> <br />
+                <br />
                 <label className='form-label'>Servings: </label>
                 <input className='form-control' type="number" onChange={handleInputChange} value={dish.servings} name='servings' />
                 {
@@ -58,7 +56,7 @@ const DishForm = (props) => {
                     <p className='text-danger'>{errors.servings.message}</p>:
                     null
                 }
-                <br /> <br />
+                <br />
                 <label className='form-label'>Prep Time: </label>
                 <input className='form-control' type="text" onChange={handleInputChange} value={dish.prepTime} name='prepTime' />
                 {
@@ -66,7 +64,7 @@ const DishForm = (props) => {
                     <p className='text-danger'>{errors.prepTime.message}</p>:
                     null
                 }
-                <br /> <br />
+                <br />
                 <label className='form-label'>Cook Time: </label>
                 <input className='form-control' type="text" onChange={handleInputChange} value={dish.cookTime} name='cookTime' />
                 {
@@ -74,7 +72,7 @@ const DishForm = (props) => {
                     <p className='text-danger'>{errors.cookTime.message}</p>:
                     null
                 }
-                <br /> <br />
+                <br />
                 <label className='form-label'>Description: </label>
                 <input className='form-control' type="text" onChange={handleInputChange} value={dish.description} name='description' />
                 {
@@ -82,7 +80,7 @@ const DishForm = (props) => {
                     <p className='text-danger'>{errors.description.message}</p>:
                     null
                 }
-                <br /> <br />
+                <br />
                 <button className='btn btn-success' >Create</button>
             </form>
             <br  /><br  />

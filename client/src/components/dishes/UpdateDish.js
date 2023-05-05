@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link,useNavigate, useParams } from 'react-router-dom';
+import modernblack from '../images/modernblack.jpg';
 
 
 const Update = (props) => {
@@ -11,6 +12,7 @@ const Update = (props) => {
     const [cookTime, setCookTime] = useState();
     const [description, setDescription] = useState();
     const navigate = useNavigate();
+
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/oneDish/'+ id)
@@ -35,14 +37,18 @@ const Update = (props) => {
         })
             .then(res => {
                 console.log(res);
-                navigate('/main');
+                navigate('/displayPage');
             })
             .catch(err => console.log(err))
-    }
+    };
+
     return(
-        <div className='m-5 border border-dark rounded w-50 h-100 d-inline-block p-3 mb-2 bg-primary text-white w-25'>
+        <div className='container3' style={{
+            backgroundImage:`url(${modernblack})`
+        }}>
+        <div className='details3'>
             <h1>Update Dish</h1>
-            <form onSubmit={updateDish}>
+            <form className='w-25' onSubmit={updateDish}>
                 <p>
                     <label>Title</label><br />
                     <input type='text'
@@ -73,15 +79,19 @@ const Update = (props) => {
                 </p>
                 <p>
                 <label>Description</label><br />
-                    <input type='text'
+                    <input type='textarea'
                     name='description'
                     value={description}
                     onChange={(e) => { setDescription(e.target.value) }} /> 
                 </p>
+                <br  /><br  />
+                <br  /><br  />
                 <input className='btn btn-success' type='submit'/>
                 <br  /><br  />
-                <Link className='btn' to={'/main'}>Home</Link>
+                <Link className='btn' to={'/displayPage'}>Home</Link>
+                <br  /><br  />
             </form>
+        </div>
         </div>
     )
 
