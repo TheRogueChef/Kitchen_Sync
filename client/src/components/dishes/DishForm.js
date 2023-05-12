@@ -84,7 +84,7 @@ const DishForm = (props) => {
                 <button className='btn btn-success' >Create</button>
             </form>
             <br  /><br  />
-                <Link className='btn' to={'/main'}>Home</Link>
+                <Link className='btn' to={'/displayPage'}>Home</Link>
         </div>
         </div>
     )

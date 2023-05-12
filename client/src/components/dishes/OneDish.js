@@ -39,13 +39,12 @@ const OneDish = (props) => {
             <Link className='btn4' to={`/displayPage`}>Dish Library</Link>
         <div className='details4'>
             <h2>{dish.title}</h2>
-            <br  /><br  />
+            <br  />
             <h3>Feeds How Many?: {dish.servings}</h3>
             <h3>How long to prep?: {dish.prepTime}</h3>
             <h3>How long to cook?: {dish.cookTime}</h3>
-            <br  /><br  />
+            <br  />
             <h4>Description: {dish.description}</h4>
-            <br  /><br  />
             <br  /><br  />
             <br  /><br  />
             <button onClick={(e)=>{deleteDish(dish._id)}} className='btn3 btn-danger'>Delete this dish from my library</button>

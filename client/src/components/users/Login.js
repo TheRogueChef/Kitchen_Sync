@@ -35,7 +35,7 @@ const Login = (props) => {
             <div className='details3'>
             <h2> Login</h2>
             <br  />
-            <form onSubmit={loginHandler} className='col-4 mx-auto user-form'>
+            <form onSubmit={loginHandler}>
                 <label className='form-label'>Email: </label>
                 <input className='form-control' type='text' name='email' value={userLogin.email} onChange={changeHandler}/>
                 <br  />

@@ -22,7 +22,7 @@ const Dashboard = (props) => {
             backgroundImage: `url(${blacktable})`} } >
             <div className='dashLeft'>
                 <Image className='dashPicL' src={kitchensink2} alt='...'/>
-                <h1>Daily Dish</h1>
+                <h1>My Kitchen Sync</h1>
             </div>
             <div className='dashCenter'>
                 <Image className='dashPic' src={food1} alt='...' />
@@ -32,7 +32,7 @@ const Dashboard = (props) => {
                 <hr/>
                 <Link className='btn' to={'/newDish'}>New Dish</Link>    
                 <hr/>
-                <Link className='btn' target='blank' to={'https://www.foodnetwork.com/recipes'}>Dish Ideas</Link>          
+                <Link className='btn' target='blank' to={'/dishApi'}>Random Dish</Link>          
             </div>
         </div>
     )
