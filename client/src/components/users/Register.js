@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import modernblack from '../images/modernblack.jpg';
 
 const Register = (props) => {
+    const [errors, setErrors] = useState({})
     const navigate = useNavigate()
     const [user, setUser] = useState({
         firstName:"",
@@ -17,7 +18,6 @@ const Register = (props) => {
         setUser({...user, [e.target.name]: e.target.value})
     }
 
-    // * SubmitHandler
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -27,7 +27,8 @@ const Register = (props) => {
                 navigate('/displayPage')
             })
             .catch((err) => {
-                console.log(err);
+                setErrors(err.response.data.error.errors)
+                console.log(err.response.data.error);
             })
     }
     
@@ -42,21 +43,41 @@ const Register = (props) => {
                 <div>
                     <label>First Name: </label>
                     <input type="text" onChange={changeHandler} value={user.firstName} name='firstName' />
+                    {
+                    errors.firstName?
+                    <p className='text-danger'>{errors.firstName.message}</p>:
+                    null
+                    }
                 </div>
                 <br  />
                 <div>
                     <label>Last Name: </label>
                     <input type="text" onChange={changeHandler} value={user.lastName} name='lastName'/>
+                    {
+                    errors.lastName?
+                    <p className='text-danger'>{errors.lastName.message}</p>:
+                    null
+                    }
                 </div>
                 <br  />
                 <div>
                     <label>Email: </label>
                     <input type="text" onChange={changeHandler} value={user.email} name='email'/>
+                    {
+                    errors.email?
+                    <p className='text-danger'>{errors.email.message}</p>:
+                    null
+                    }
                 </div>
                 <br  />
                 <div>
                     <label>Password: </label>
                     <input type="password" onChange={changeHandler} value={user.password} name='password'/>
+                    {
+                    errors.password?
+                    <p className='text-danger'>{errors.password.message}</p>:
+                    null
+                    }
                 </div>
                 <br  />
                 <div>

@@ -57,7 +57,7 @@ const DishForm = (props) => {
                     null
                 }
                 <br />
-                <label className='form-label'>Prep Time: </label>
+                <label className='form-label'>Prep Time: (in minutes) </label>
                 <input className='form-control' type="text" onChange={handleInputChange} value={dish.prepTime} name='prepTime' />
                 {
                     errors.prepTime?
@@ -65,7 +65,7 @@ const DishForm = (props) => {
                     null
                 }
                 <br />
-                <label className='form-label'>Cook Time: </label>
+                <label className='form-label'>Cook Time: (in minutes)</label>
                 <input className='form-control' type="text" onChange={handleInputChange} value={dish.cookTime} name='cookTime' />
                 {
                     errors.cookTime?

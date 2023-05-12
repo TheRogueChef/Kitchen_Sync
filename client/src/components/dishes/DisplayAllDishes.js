@@ -30,8 +30,8 @@ const DisplayAllDishes = (props) => {
                     <div className='details' key={index}>
                         <h3>{dish.title}</h3>
                         <p>servings: {dish.servings}</p>
-                        <p>Prep time: {dish.prepTime}</p>
-                        <p>Cook time: {dish.cookTime}</p>
+                        <p>Prep time: {dish.prepTime} minutes</p>
+                        <p>Cook time: {dish.cookTime} minutes</p>
                         <br /><br />
                         <Link className='btn2' to={`/updateDish/${dish._id}`}>Edit page</Link>
                         <br /><br />

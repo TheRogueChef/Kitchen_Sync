@@ -41,8 +41,8 @@ const OneDish = (props) => {
             <h2>{dish.title}</h2>
             <br  />
             <h3>Feeds How Many?: {dish.servings}</h3>
-            <h3>How long to prep?: {dish.prepTime}</h3>
-            <h3>How long to cook?: {dish.cookTime}</h3>
+            <h3>How long to prep?: {dish.prepTime} minutes</h3>
+            <h3>How long to cook?: {dish.cookTime} minutes</h3>
             <br  />
             <h4>Description: {dish.description}</h4>
             <br  /><br  />

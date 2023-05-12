@@ -64,15 +64,15 @@ const Update = (props) => {
                     onChange={(e) => { setServings(e.target.value) }} />
                 </p>
                 <p>
-                <label>Prep Time</label><br />
-                    <input type='text'
+                <label>Prep Time (in minutes)</label><br />
+                    <input type='number'
                     name='prepTime'
                     value={prepTime}
                     onChange={(e) => { setPrepTime(e.target.value) }} />
                 </p>
                 <p>
-                <label>Cook Time</label><br />
-                    <input type='text'
+                <label>Cook Time (in minutes)</label><br />
+                    <input type='number'
                     name='cookTime'
                     value={cookTime}
                     onChange={(e) => { setCookTime(e.target.value) }} />

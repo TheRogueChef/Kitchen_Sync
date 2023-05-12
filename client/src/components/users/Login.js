@@ -5,7 +5,6 @@ import modernblack from '../images/modernblack.jpg';
 
 const Login = (props) => {
     const navigate = useNavigate()
-
     const [userLogin, setUserLogin] = useState({
         email:"",
         password:""
@@ -23,7 +22,7 @@ const Login = (props) => {
                 navigate('/displayPage')
             })
             .catch((err) => {
-                console.log(err);
+                console.log(err.response.data.message);
             })
     }
 
@@ -38,9 +37,11 @@ const Login = (props) => {
             <form onSubmit={loginHandler}>
                 <label className='form-label'>Email: </label>
                 <input className='form-control' type='text' name='email' value={userLogin.email} onChange={changeHandler}/>
+        
                 <br  />
                 <label className='form-label'>Password: </label>
                 <input className='form-control' type='password' name='password' value={userLogin.password} onChange={changeHandler}/>
+       
                 <br  />
                 <button className='btn btn-dark mt-3'>Login</button>
                 <br/> <br  />
