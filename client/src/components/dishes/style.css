@@ -1,52 +1,47 @@
 .App {
     text-align: center;
+    background-image: url('../images/modernblack.jpg');
 }
-
 
 /*Dashboard*/
 .dashShell {
     width: auto;
     border: 5px solid black;
-    height: 250px;
+    height: 270px;
     background-color: lightgrey;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-
 .dashLeft {
     font-family: cursive;
     font-weight: bolder;
     font-style: italic;
-    color: red;
+    color: lightgray;
 }
-
 .dashPicL {
     border-radius: 10px;
-    border: 2px solid darkgray;
+    border: 2px solid red;
     box-shadow: 5px 5px;
     width: 100px;
     height: 100px;
 }
-
 .dashCenter {
-    margin-right: 170px;
+
     font-family: cursive;
     font-weight: bold;
     font-style: italic;
 }
-
 .dashRight {
     font-family: cursive;
     font-weight: bold;
     font-style: italic;
 }
-
 .dashPic {
     border-radius: 10px;
-    border: 2px solid black;
-    box-shadow: 5px 5px;
-    width: 450px;
+    border: 2px solid red;
+    box-shadow: 5px 5px lightgray;
+    width: 500px;
     height: 175px;
 }
 
@@ -55,11 +50,10 @@
     width: auto;
     height: auto;
     font-family: cursive;
-    background-color: tan;
+    background-color: transparent;
     color: black;
     border: 5px solid black;
 }
-
 .container {
     width: auto;
     height: auto;
@@ -72,33 +66,28 @@
     align-items: center;
     justify-content: space-evenly;
 }
-
 .details {
     width: 200px;
     height: auto;
     margin: 20px;
     background-color: rgb(137, 96, 96);
     color: black;
-    border: 3px solid black;
+    border: 3px solid greenyellow;
     box-shadow: 5px 5px;
     border-radius: 5%;
 }
-
 .btn {
-    width: 100px;
+    width: 110px;
     height: 30px;
-    background-color: black;
+    background-color: red;
     color: antiquewhite;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 2px 2px;
 }
-
-
-
 .container2 {
     width: auto;
-    height: 500px;
+    height: auto;
     font-family: cursive;
     color: black;
     border-left: 5px solid black;
@@ -107,8 +96,7 @@
     align-items: center;
     justify-content: space-evenly;
 }
-
-.details2 {
+/* .details2 {
     width: 250px;
     height: 300px;
     margin: 5px;
@@ -119,14 +107,12 @@
     border-radius: 5%;
     text-align: left;
     padding: 0px 5px 5px 5px;
-}
-
-
+} */
 .btn2 {
     width: 150px;
     height: 50px;
     background-color: red;
-    color: black;
+    color:whitesmoke;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 2px 2px;
@@ -135,14 +121,13 @@
 }
 
 /* dish form */
-
 .details3 {
-    width: 400px;
-    height: 600px;
+    width: auto;
+    height: auto;
     margin: 5px;
     background-color: rgb(135, 152, 222);
     color: black;
-    border: 3px solid black;
+    border: 3px solid greenyellow;
     box-shadow: 5px 5px;
     border-radius: 5%;
     padding: 20px;
@@ -151,7 +136,7 @@
 /* login/reg */
 .container3 {
     width: auto;
-    height: 750px;
+    height: 720px;
     font-family: cursive;
     color: black;
     border-left: 5px solid black;
@@ -162,47 +147,34 @@
 }
 
 /* showone */
-
 .container4 {
     width: auto;
-    height: 2000px;
+    height: auto;
     font-family: cursive;
     color: black;
     border-left: 5px solid black;
     border-right: 5px solid black;
 }
-
-.details4 {
-    width: auto;
-    height: auto;
-    margin-left: 350px;
-    margin-top: 50px;
-    background-color: rgb(135, 152, 222);
-    color: black;
-    border: 3px solid black;
-    box-shadow: 5px 5px;
-    border-radius: 5%;
-    padding: 20px;
-    align-self: center;
+.innerBox {
+    align-content: center;
+    padding-right: 80px;
 }
-
 .btn3 {
     width: 150px;
     height: 50px;
     background-color: red;
-    color: black;
+    color: whitesmoke;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 2px 2px;
     margin: 2px;
     padding: 2px;
 }
-
 .btn4 {
     width: 200px;
     height: 100px;
     background-color: rgb(191, 20, 48);
-    color: black;
+    color: whitesmoke;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 2px 2px;
@@ -211,34 +183,81 @@
 }
 
 /* API page */
-
 .details4 {
     width: 800px;
-    height: 700px;
+    height: auto;
     margin-left: 350px;
     margin-top: 50px;
     background-color: rgb(135, 152, 222);
     color: black;
-    border: 3px solid black;
+    border: 3px solid greenyellow;
     box-shadow: 5px 5px;
     border-radius: 5%;
     padding: 20px;
     align-self: center;
 }
-
 .container5 {
-    padding-top: 100px;
+    padding-top: 10px;
     width: auto;
-    height: 1500px;
+    height: 2000px;
     font-family: cursive;
     color: black;
     border-left: 5px solid black;
     border-right: 5px solid black;
 }
-
 .buttonHolder {
-    margin: 50px;
+    margin: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
     width: auto;
     height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* update form */
+.container6 {
+    width: auto;
+    height: 1200px;
     font-family: cursive;
+    color: black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.details5 {
+    width: auto;
+    height: auto;
+    margin: 5px;
+    background-color: rgb(135, 152, 222);
+    color: black;
+    border: 3px solid greenyellow;
+    box-shadow: 5px 5px;
+    border-radius: 5%;
+    padding: 20px;
+}
+
+/* searchApi */
+.details6 {
+    width: auto;
+    height: auto;
+    margin: 20px;
+    background-color: rgb(137, 96, 96);
+    color: black;
+    border: 3px solid greenyellow;
+    box-shadow: 5px 5px;
+    border-radius: 5%;
+    font-weight: bold;
+}
+.container7 {
+    padding-top: 10px;
+    width: auto;
+    height: 3500px;
+    font-family: cursive;
+    color: black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
 }

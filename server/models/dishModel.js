@@ -16,10 +16,15 @@ const DishSchema = new mongoose.Schema({
     cookTime: {
         type: String,
         required: [true, 'How long it will take to cook is required']},
+    ingredients: {
+        type: [],
+        required: [true, 'How much of what is in it?'],
+        minLength: [10, 'Ingredients must be at least 10 characters'],
+        maxLength: 5000},
     description: {
         type: String,
-        required: [true, 'Description required'],
-        minLength: [10, 'Description must be at least 10 characters'],
+        required: [true, 'Directions required'],
+        minLength: [10, 'Directions must be at least 10 characters'],
         maxLength: 5000},
 }, {timestamps:true})
 

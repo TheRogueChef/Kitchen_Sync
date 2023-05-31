@@ -6,17 +6,17 @@ import modernblack from '../images/modernblack.jpg';
 const Login = (props) => {
     const navigate = useNavigate()
     const [userLogin, setUserLogin] = useState({
-        email:"",
-        password:""
+        email: "",
+        password: ""
     })
 
     const changeHandler = (e) => {
-        setUserLogin({...userLogin, [e.target.name]: e.target.value})
+        setUserLogin({ ...userLogin, [e.target.name]: e.target.value })
     }
 
     const loginHandler = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:8000/api/login', userLogin, {withCredentials:true})
+        axios.post('http://localhost:8000/api/login', userLogin, { withCredentials: true })
             .then((res) => {
                 console.log(res);
                 navigate('/displayPage')
@@ -29,26 +29,27 @@ const Login = (props) => {
 
     return (
         <div className='container3' style={{
-            backgroundImage:`url(${modernblack})`
+            backgroundImage: `url(${modernblack})`
         }}>
             <div className='details3'>
-            <h2> Login</h2>
-            <br  />
-            <form onSubmit={loginHandler}>
-                <label className='form-label'>Email: </label>
-                <input className='form-control' type='text' name='email' value={userLogin.email} onChange={changeHandler}/>
-        
-                <br  />
-                <label className='form-label'>Password: </label>
-                <input className='form-control' type='password' name='password' value={userLogin.password} onChange={changeHandler}/>
-       
-                <br  />
-                <button className='btn btn-dark mt-3'>Login</button>
-                <br/> <br  />
-                <Link style={{ color: `red`}} to={'/'}>Don't have an account? Click here to sign up</Link>
-            </form>
+                <h2 style={{ color: 'greenyellow', fontWeight: 'bolder', textDecoration: 'underline' }}> Login</h2>
+                <br />
+                <form onSubmit={loginHandler}>
+                    <label className='form-label'>Email: </label>
+                    <input className='form-control' style={{ marginLeft: '50px', height: '30px', width: '200px' }} type='text' name='email' value={userLogin.email} onChange={changeHandler} />
+
+                    <br />
+                    <label className='form-label'>Password: </label>
+                    <input className='form-control' style={{ marginLeft: '50px', height: '30px', width: '200px' }} type='password' name='password' value={userLogin.password} onChange={changeHandler} />
+
+                    <br />
+                    <button className='btn btn-dark mt-3'>Login</button>
+                    <br /> <br />
+                    <Link style={{ color: `red` }} to={'/'}>Don't have an account? Click here to sign up</Link>
+                </form>
             </div>
         </div>
-)}
+    )
+}
 
 export default Login;

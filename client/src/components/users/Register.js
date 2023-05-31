@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import modernblack from '../images/modernblack.jpg';
 
 const Register = (props) => {
     const [errors, setErrors] = useState({})
@@ -18,7 +17,6 @@ const Register = (props) => {
         setUser({...user, [e.target.name]: e.target.value})
     }
 
-
     const submitHandler = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8000/api/register', user, {withCredentials:true})
@@ -29,16 +27,15 @@ const Register = (props) => {
             .catch((err) => {
                 setErrors(err.response.data.error.errors)
                 console.log(err.response.data.error);
-            })
-    }
+            })}
     
     return (
         <div className='container3' style={{
-            backgroundImage:`url(${modernblack})`
+            backgroundImage:`transparent`
         }}>
             <div className='details3'>
             <form onSubmit={submitHandler}>
-                <h1>Register</h1>
+                <h1 style={{ color:'greenyellow', fontWeight: 'bolder', textDecoration: 'underline'}}>Register</h1>
                 <br  />
                 <div>
                     <label>First Name: </label>

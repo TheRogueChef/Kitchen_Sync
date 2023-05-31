@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link,useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import modernblack from '../images/modernblack.jpg';
 
 const DishForm = (props) => {
     const [errors, setErrors] = useState ({})
@@ -12,9 +11,9 @@ const DishForm = (props) => {
         servings: Number(0),
         prepTime: '',
         cookTime: '',
+        ingredients: '',
         description: ''
     });
-
 
     const handleInputChange = (e) => {
         setDish({ ...dish, [e.target.name]: e.target.value })
@@ -24,7 +23,7 @@ const DishForm = (props) => {
         e.preventDefault();
         axios.post('http://localhost:8000/api/newDish', dish)
             .then((res) => {
-                setDish({title:"", servings:0, prepTime: "", cookTime: "", description:""})
+                setDish({title:"", servings:0, prepTime: "", cookTime: "", ingredients: [], description:""})
                 navigate('/displayPage')
             })
             .catch((err) => {
@@ -32,14 +31,12 @@ const DishForm = (props) => {
             })
     }
 
-
-
     return (
-        <div className='container3'  style={{
-            backgroundImage: `url(${modernblack})`} }>
+        <div className='container2'  style={{
+            backgroundImage: `transparent`} }>
         <div className='details3'>
             <form className='w-25' onSubmit={submitHandler}>
-                <h1>Create a New Dish</h1>
+                <h1 style={{ color: 'greenyellow', fontWeight: 'bolder', textDecoration: 'underline'}}>Create a New Dish</h1>
 
                 <label className='form-label'>Title: </label>
                 <input className='form-control' type="text" onChange={handleInputChange} value={dish.title} name='title' />
@@ -73,8 +70,16 @@ const DishForm = (props) => {
                     null
                 }
                 <br />
-                <label className='form-label'>Description: </label>
-                <input className='form-control' type="text" onChange={handleInputChange} value={dish.description} name='description' />
+                <label className='form-label'>Ingredients with measurements</label>
+                <textarea className='form-control' type="textarea" onChange={handleInputChange} value={dish.ingredients} name='ingredients' style={{ height: '200px', width: '400px', whiteSpace: 'pre-wrap'}} />
+                {
+                    errors.ingredients?
+                    <p className='text-danger'>{errors.ingredients.message}</p>:
+                    null
+                }
+                <br />
+                <label className='form-label'>Directions: </label>
+                <textarea className='form-control' type="text" onChange={handleInputChange} value={dish.description} name='description' style={{ height: '200px', width: '400px', whiteSpace: 'pre-wrap'}} />
                 {
                     errors.description?
                     <p className='text-danger'>{errors.description.message}</p>:

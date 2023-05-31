@@ -1,9 +1,8 @@
 import './style.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import modernblack from '../images/modernblack.jpg';
 
 const DishApi = (props) => {
     const [dish, setDish] = useState({
@@ -11,6 +10,7 @@ const DishApi = (props) => {
         servings: '',
         prepTime: '',
         cookTime: '',
+        ingredients: [],
         description: ''
     });
 
@@ -25,12 +25,12 @@ const DishApi = (props) => {
                     servings: res.data.recipes[0].servings,
                     prepTime: res.data.recipes[0].preparationMinutes,
                     cookTime: res.data.recipes[0].readyInMinutes,
+                    ingredients: res.data.recipes[0].extendedIngredients,
                     description: res.data.recipes[0].instructions
                 });
             })
             .catch((err) => { console.log(err) })
     }, [])
-
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -49,8 +49,29 @@ const DishApi = (props) => {
 
     return (
         <div className="container5" style={{
-            backgroundImage: `url(${modernblack})`
+            backgroundImage: `transparent`
         }}>
+            <form className='details4' onSubmit={submitHandler}>
+                <h1 value={dish.title} name='title' style={{ color: 'greenyellow', fontWeight: 'bolder', textDecoration: 'underline'}}>{dish.title}</h1>
+                <br />
+                <h3 value={dish.servings} name='servings'>Serves: {dish.servings}</h3>
+                <br />
+                <h3 value={dish.prepTime} name='prepTime'>Prep Time: {dish.prepTime} minutes</h3>
+                <br />
+                <h3 value={dish.cookTime} name='cookTime'>Cook Time: {dish.cookTime} minutes</h3>
+                <br />
+                <h3>Ingredients: </h3>
+                <ul>
+                    {dish.ingredients.map((ingredients) => (
+                        <ul className='innerBox' key={ingredients.id}>{ingredients.original}</ul>
+                    ))}
+                </ul>
+                <br /><br />
+                <h5 value={dish.description} name='description'>Directions: {dish.description}</h5>
+                <br /><br />
+                <br /><br />
+                <button className='btn2' type='submit'>Add to library</button>
+            </form>
             <div className='buttonHolder'>
                 <a href='/DisplayPage'>
                 <button className='btn3'>Take me Home</button>
@@ -58,22 +79,6 @@ const DishApi = (props) => {
                 <br  /><br  />
                 <button className='btn3' onClick={refreshPage}>Try Again</button>
             </div>
-            <form className='details4' onSubmit={submitHandler}>
-                <h1 value={dish.title} name='title'>{dish.title}</h1>
-                <br />
-                <h3 value={dish.servings} name='servings'>Serves: {dish.servings}</h3>
-                <br />
-                <h3 value={dish.prepTime} name='prepTime'>Prep Time: {dish.prepTime} minutes</h3>
-                <br />
-                <h3 value={dish.cookTime} name='cookTime'>Cook Time: {dish.cookTime} minutes</h3>
-                <br /><br />
-                <h5 value={dish.description} name='description'>Description: {dish.description}</h5>
-                <br /><br />
-                <br /><br />
-                <button className='btn2' type='submit'>Add to library</button>
-            </form>
         </div>
-
-    )
-}
+    )}
 export default DishApi;
