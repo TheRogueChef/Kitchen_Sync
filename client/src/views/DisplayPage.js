@@ -8,8 +8,9 @@ const DisplayPage = (props) => {
     return (
         <div style={{ backgroundImage: `transparent`}}>
             <Dashboard />
-            <div style={{ backgroundImage: 'transparent', color: 'greenyellow', fontFamily: 'cursive', fontWeight: 'bolder', fontSize: 'xx-large', textDecoration: 'underline'}}>Recipe Library
-            <br  /> <br  />
+            <br/>
+            <div className= 'pageTitle'>Recipe Library
+            <br/> <br/>
             </div>
             <DisplayAllDishes dish={dish} setDayDish={setDish} />
         </div>

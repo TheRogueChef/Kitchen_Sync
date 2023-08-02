@@ -35,11 +35,11 @@ const Register = (props) => {
         }}>
             <div className='details3'>
             <form onSubmit={submitHandler}>
-                <h1 style={{ color:'greenyellow', fontWeight: 'bolder', textDecoration: 'underline'}}>Register</h1>
+                <p className= 'pageTitle'>Register</p>
                 <br  />
                 <div>
-                    <label>First Name: </label>
-                    <input type="text" onChange={changeHandler} value={user.firstName} name='firstName' />
+                    <label>First Name </label>
+                    <input className= 'inputBox' type="text" onChange={changeHandler} value={user.firstName} name='firstName' />
                     {
                     errors.firstName?
                     <p className='text-danger'>{errors.firstName.message}</p>:
@@ -48,8 +48,8 @@ const Register = (props) => {
                 </div>
                 <br  />
                 <div>
-                    <label>Last Name: </label>
-                    <input type="text" onChange={changeHandler} value={user.lastName} name='lastName'/>
+                    <label>Last Name </label>
+                    <input className= 'inputBox'  type="text" onChange={changeHandler} value={user.lastName} name='lastName'/>
                     {
                     errors.lastName?
                     <p className='text-danger'>{errors.lastName.message}</p>:
@@ -58,8 +58,8 @@ const Register = (props) => {
                 </div>
                 <br  />
                 <div>
-                    <label>Email: </label>
-                    <input type="text" onChange={changeHandler} value={user.email} name='email'/>
+                    <label>Email </label>
+                    <input className= 'inputBox' type="text" onChange={changeHandler} value={user.email} name='email'/>
                     {
                     errors.email?
                     <p className='text-danger'>{errors.email.message}</p>:
@@ -68,8 +68,8 @@ const Register = (props) => {
                 </div>
                 <br  />
                 <div>
-                    <label>Password: </label>
-                    <input type="password" onChange={changeHandler} value={user.password} name='password'/>
+                    <label>Password </label>
+                    <input className= 'inputBox' type="password" onChange={changeHandler} value={user.password} name='password'/>
                     {
                     errors.password?
                     <p className='text-danger'>{errors.password.message}</p>:
@@ -78,15 +78,16 @@ const Register = (props) => {
                 </div>
                 <br  />
                 <div>
-                    <label>Confirm Password: </label>
-                    <input type="password" onChange={changeHandler} value={user.confirmPassword} name='confirmPassword'/>
+                    <label>Confirm Password </label>
+                    <input className= 'inputBox' type="password" onChange={changeHandler} value={user.confirmPassword} name='confirmPassword'/>
                 </div>
                 <br  /> <br  />
-                <button>Register</button>
-                <br  />
+                <button className='btn'>Register</button>
+                <br/>
             </form>
             <br  /> <br  />
-        <Link to={'/login'} style={{ color: `red`}}>Already have an account?</Link>
+        <Link to={'/login'} style={{ color: `red`}}>Already have an account</Link>
+        <br  /> <br  /><br  /> <br  />
         </div>
         </div>
     )}

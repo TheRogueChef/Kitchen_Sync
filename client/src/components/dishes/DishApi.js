@@ -52,7 +52,7 @@ const DishApi = (props) => {
             backgroundImage: `transparent`
         }}>
             <form className='details4' onSubmit={submitHandler}>
-                <h1 value={dish.title} name='title' style={{ color: 'greenyellow', fontWeight: 'bolder', textDecoration: 'underline'}}>{dish.title}</h1>
+                <p value={dish.title} name='title' className= 'pageTitle'>{dish.title}</p>
                 <br />
                 <h3 value={dish.servings} name='servings'>Serves: {dish.servings}</h3>
                 <br />

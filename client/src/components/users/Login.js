@@ -32,20 +32,19 @@ const Login = (props) => {
             backgroundImage: `url(${modernblack})`
         }}>
             <div className='details3'>
-                <h2 style={{ color: 'greenyellow', fontWeight: 'bolder', textDecoration: 'underline' }}> Login</h2>
+                <p className='pageTitle'> Login</p>
                 <br />
                 <form onSubmit={loginHandler}>
-                    <label className='form-label'>Email: </label>
-                    <input className='form-control' style={{ marginLeft: '50px', height: '30px', width: '200px' }} type='text' name='email' value={userLogin.email} onChange={changeHandler} />
-
-                    <br />
-                    <label className='form-label'>Password: </label>
-                    <input className='form-control' style={{ marginLeft: '50px', height: '30px', width: '200px' }} type='password' name='password' value={userLogin.password} onChange={changeHandler} />
-
-                    <br />
-                    <button className='btn btn-dark mt-3'>Login</button>
-                    <br /> <br />
-                    <Link style={{ color: `red` }} to={'/'}>Don't have an account? Click here to sign up</Link>
+                    <label>Email </label>
+                    <br/>
+                    <input className='inputBox'  type='text' name='email' value={userLogin.email} onChange={changeHandler} />
+                    <br/> <br/>
+                    <label>Password </label>
+                    <input className='inputBox' type='password' name='password' value={userLogin.password} onChange={changeHandler} />
+                    <br/> <br/>
+                    <button className='btn'>Login</button>
+                    <br/> <br/>
+                    <Link style={{ color: `red` }} to={'/'}>Click here to register</Link>
                 </form>
             </div>
         </div>

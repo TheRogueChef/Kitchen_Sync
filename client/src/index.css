@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Graffiti";
+  src: local("Graffiti"),
+    url("./components/fonts/Graffiti/Graffiti.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "QM";
+  src: local("QuickerMachine"),
+    url("./components/fonts/QuickerMachine/QuickerMachine.ttf") format("truetype");
+  font-weight: bold;
+}

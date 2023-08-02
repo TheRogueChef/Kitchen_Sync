@@ -23,14 +23,14 @@ const DisplayAllDishes = (props) => {
             {dishList.map((dish, index) => {
                 return (
                     <div className='details' key={index}>
-                        <h3 style={{ color: 'yellow', fontStyle: 'italic', paddingLeft: '5px', paddingRight: '5px' }}>{dish.title}</h3>
-                        <p>servings: {dish.servings}</p>
-                        <p>Prep time: {dish.prepTime} minutes</p>
-                        <p>Cook time: {dish.cookTime} minutes</p>
+                        <p className='dishTitle'>{dish.title}</p>
+                        <h3>servings: {dish.servings}</h3>
+                        <h3>Prep time: {dish.prepTime} minutes</h3>
+                        <h3>Cook time: {dish.cookTime} minutes</h3>
                         <br />
-                        <Link className='btn2' to={`/updateDish/${dish._id}`}>Edit page</Link>
+                        <Link className='btn' to={`/updateDish/${dish._id}`}>Edit page</Link>
                         <br /><br />
-                        <Link className='btn2' to={`/oneDish/${dish._id}`}>Let's make this</Link>
+                        <Link className='btn' to={`/oneDish/${dish._id}`}>Let's make this</Link>
                     </div>
                 )
             })}
