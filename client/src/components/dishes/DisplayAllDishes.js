@@ -19,11 +19,11 @@ const DisplayAllDishes = (props) => {
     }, []);
 
     return (
-        <div className='container' style={{ backgroundImage: 'transparent' }}>
+        <div className='container'>
             {dishList.map((dish, index) => {
                 return (
                     <div className='details' key={index}>
-                        <p className='dishTitle'>{dish.title}</p>
+                        <p className='pageTitle'>{dish.title}</p>
                         <h3>servings: {dish.servings}</h3>
                         <h3>Prep time: {dish.prepTime} minutes</h3>
                         <h3>Cook time: {dish.cookTime} minutes</h3>

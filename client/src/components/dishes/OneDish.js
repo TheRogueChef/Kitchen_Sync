@@ -27,36 +27,40 @@ const OneDish = (props) => {
     };
 
     return (
-        <div className='container4' style={{
-            backgroundImage: `transparent`
-        }}>
-            <Dashboard />
-            <br /><br />
-            <Link className='btn4' to={`/displayPage`}>Back to Library</Link>
-            <div className='details4'>
-                <h1 style={{ textDecoration: 'underline', fontWeight: 'bolder', color: 'greenyellow'}}>{dish.title}</h1>
+        <div className='container4'>
+       
+            <br />
+            <Link className='btn' to={`/displayPage`}>Back to Library</Link>
+            <div className='details3'>
+                <p className='pageTitle'>{dish.title}</p>
                 <br />
-                <h3>Feeds How Many: {dish.servings}</h3>
-                <h3>How long to prep: {dish.prepTime} minutes</h3>
-                <h3>How long to cook: {dish.cookTime} minutes</h3>
-                <br /><br />
+                <h1>Feeds How Many: </h1>
+                <p>{dish.servings}</p>
+                <br />
+                <h1>How long to prep:</h1>
+                <p>{dish.prepTime} minutes</p>
+                <br />
+                <h1>How long to cook: </h1>
+                <p>{dish.cookTime} minutes</p>
+                <br />
                 {dish.ingredients && (
                     <>
-                        <h2>Ingredients:</h2>
+                        <h1>Ingredients:</h1>
                         <ul>
                             {dish.ingredients.map((ingredients) => (
                                 <ul className='innerBox' key={ingredients.id}>{ingredients.original}</ul>
                             ))}
                         </ul>
-                        <br /><br />
                     </>
                 )}
                 <br />
-                <h4>Directions: {dish.description}</h4>
+                <h1>Directions: </h1>
+                <p>{dish.description}</p>
                 <br /><br />
-                <br /><br />
-                <button onClick={(e) => { deleteDish(dish._id) }} className='btn3 btn-danger'>Delete from library</button>
+                <button onClick={(e) => { deleteDish(dish._id) }} className='btn'>Delete from library</button>
+
             </div>
+            <br />
         </div>
     )
 }

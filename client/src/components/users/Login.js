@@ -36,10 +36,11 @@ const Login = (props) => {
                 <br />
                 <form onSubmit={loginHandler}>
                     <label>Email </label>
-                    <br/>
+            
                     <input className='inputBox'  type='text' name='email' value={userLogin.email} onChange={changeHandler} />
                     <br/> <br/>
                     <label>Password </label>
+                  
                     <input className='inputBox' type='password' name='password' value={userLogin.password} onChange={changeHandler} />
                     <br/> <br/>
                     <button className='btn'>Login</button>

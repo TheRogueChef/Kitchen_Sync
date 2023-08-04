@@ -43,17 +43,16 @@ const Update = (props) => {
     };
 
     return(
-        <div className='container6' style={{
-            backgroundImage:`transparent`
-        }}>
-        <div className='details5'>
-            <h1 style={{ color: 'greenyellow', fontWeight: 'bolder', textDecoration: 'underline'}}>Update Recipe</h1>
-            <form className='w-25' onSubmit={updateDish}>
+        <div className='container3'>
+        <div className='details'>
+            <h1 className='pageTitle'>Update Recipe</h1>
+            <form onSubmit={updateDish}>
                 <br  />
                 <p>
                     <label>Title</label><br />
                     <input type='text'
                     name='title'
+                    className='inputBox'
                     value={title}
                     onChange={(e) => { setTitle(e.target.value) }} />
                 </p>
@@ -61,6 +60,7 @@ const Update = (props) => {
                 <label>Servings</label><br />
                     <input type='number'
                     name='servings'
+                    className='inputBox'
                     value={servings}
                     onChange={(e) => { setServings(e.target.value) }} />
                 </p>
@@ -68,6 +68,7 @@ const Update = (props) => {
                 <label>Prep Time (in minutes)</label><br />
                     <input type='number'
                     name='prepTime'
+                    className='inputBox'
                     value={prepTime}
                     onChange={(e) => { setPrepTime(e.target.value) }} />
                 </p>
@@ -75,6 +76,7 @@ const Update = (props) => {
                 <label>Cook Time (in minutes)</label><br />
                     <input type='number'
                     name='cookTime'
+                    className='inputBox'
                     value={cookTime}
                     onChange={(e) => { setCookTime(e.target.value) }} />
                 </p>
@@ -83,26 +85,27 @@ const Update = (props) => {
                 <label>Ingredients w/measurements</label><br />
                     <textarea
                     name='ingredients'
+                    className='entryBox'
                     value={ingredients.map(ingredient => ingredient.original).join('\n')}
                     onChange={(e) => {
                         const value = e.target.value;
                         const lines = value.split("\n");
                         setIngredients(lines.map(line => ({ original: line })));
                     }}
-                    style={{ height: '200px', width: '400px', whiteSpace: 'pre-wrap'}}
+                    
                     />
                 </p>
                 <p>
                 <label>Directions</label><br />
                     <textarea
                     name='description'
+                    className='entryBox'
                     value={description}
                     onChange={(e) => { setDescription(e.target.value) }}
-                    style={{ height: '200px', width: '400px', whiteSpace: 'pre-wrap'}}
                     /> 
                 </p>
                 <br  /><br  />
-                <input className='btn btn-success' type='submit'/>
+                <input className='btn' type='submit'/>
                 <br  /><br  />
                 <Link className='btn' to={'/displayPage'}>Home</Link>
                 <br  /><br  />

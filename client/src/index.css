@@ -24,3 +24,15 @@ code {
     url("./components/fonts/QuickerMachine/QuickerMachine.ttf") format("truetype");
   font-weight: bold;
 }
+@font-face {
+  font-family: "BS";
+  src: local("BlackStory"),
+    url("./components/fonts/BlackStory/BlackStory.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "GH";
+  src: local("GhostHouse"),
+    url("./components/fonts/GhostHouse/GhostHouse.ttf") format("truetype");
+  font-weight: bold;
+}

@@ -48,37 +48,40 @@ const DishApi = (props) => {
     }
 
     return (
-        <div className="container5" style={{
-            backgroundImage: `transparent`
-        }}>
-            <form className='details4' onSubmit={submitHandler}>
-                <p value={dish.title} name='title' className= 'pageTitle'>{dish.title}</p>
+        <div className="container4">
+            <br/>
+            <div className='buttonHolder'>
+                <a href='/DisplayPage'>
+                    <button className='btn'>Take me Home</button>
+                </a>
+                <button className='btn' onClick={refreshPage}>Try Again</button>
+            </div>
+            <form className='details3' onSubmit={submitHandler}>
+                <p value={dish.title} name='title' className='pageTitle'>{dish.title}</p>
                 <br />
-                <h3 value={dish.servings} name='servings'>Serves: {dish.servings}</h3>
+                <h1>Serves:</h1>
+                <p value={dish.servings} name='servings'>{dish.servings}</p>
                 <br />
-                <h3 value={dish.prepTime} name='prepTime'>Prep Time: {dish.prepTime} minutes</h3>
+                <h1>Prep Time:</h1>
+                <h2 value={dish.prepTime} name='prepTime'>{dish.prepTime} minutes</h2>
                 <br />
-                <h3 value={dish.cookTime} name='cookTime'>Cook Time: {dish.cookTime} minutes</h3>
+                <h1>Cook Time:</h1>
+                <p value={dish.cookTime} name='cookTime'>{dish.cookTime} minutes</p>
                 <br />
-                <h3>Ingredients: </h3>
+                <h1>Ingredients: </h1>
                 <ul>
                     {dish.ingredients.map((ingredients) => (
                         <ul className='innerBox' key={ingredients.id}>{ingredients.original}</ul>
                     ))}
                 </ul>
                 <br /><br />
-                <h5 value={dish.description} name='description'>Directions: {dish.description}</h5>
+                <h1>Directions:</h1>
+                <p value={dish.description} name='description'>{dish.description}</p>
                 <br /><br />
-                <br /><br />
-                <button className='btn2' type='submit'>Add to library</button>
+                <button className='btn' type='submit'>Add to library</button>
             </form>
-            <div className='buttonHolder'>
-                <a href='/DisplayPage'>
-                <button className='btn3'>Take me Home</button>
-                </a>
-                <br  /><br  />
-                <button className='btn3' onClick={refreshPage}>Try Again</button>
-            </div>
+            <br /><br />
         </div>
-    )}
+    )
+}
 export default DishApi;

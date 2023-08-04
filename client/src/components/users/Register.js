@@ -85,9 +85,8 @@ const Register = (props) => {
                 <button className='btn'>Register</button>
                 <br/>
             </form>
-            <br  /> <br  />
+            <br/>
         <Link to={'/login'} style={{ color: `red`}}>Already have an account</Link>
-        <br  /> <br  /><br  /> <br  />
         </div>
         </div>
     )}

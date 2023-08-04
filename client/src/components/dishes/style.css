@@ -8,18 +8,19 @@
     width: auto;
     border: 1rem solid rgb(60, 58, 58);
     height: 100%;
-    background-position: 2rem;
+    background-position: .1rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding: .75%;
 }
+
 .dashLeft {
     font-family: cursive;
-    font-size: 6rem;
+    font-size: 6em;
     font-weight: bolder;
     font-style: italic;
-    font-family: 'Graffiti';
+    font-family: 'QM';
     color: lightgray;
 }
 
@@ -29,7 +30,9 @@
     border-radius: 50%;
     text-shadow: .2rem .2rem red;
 }
-.dashPic, .dashPicL {
+
+.dashPic,
+.dashPicL {
     border-radius: 5%;
     border: .2rem solid red;
     box-shadow: .5rem .5rem rgb(60, 58, 58);
@@ -37,7 +40,9 @@
     height: 10rem;
     margin-bottom: 3%;
 }
-.dashCenter, .dashRight {
+
+.dashCenter,
+.dashRight {
     font-family: cursive;
     font-weight: bold;
     font-style: italic;
@@ -48,38 +53,65 @@
     height: 15rem;
 }
 
-/*displayAll*/
+/*Everything Else*/
 
-.pageTitle {
-    color: rgb(205, 220, 182);
-    font-family: 'Graffiti';
-    font-size: 4em;
-    text-decoration: underline;
-    text-shadow: .2rem .2rem red;
-}
-.banner {
+.btn {
     width: auto;
-    height: auto;
-    font-family: cursive;
-    background-color: transparent;
-    color: black;
-    border: 5px solid black;
+    font-family: 'QM';
+    font-size: 2em;
+    background-color: red;
+    color: antiquewhite;
+    border: .2rem solid black;
+    border-radius: 30%;
+    box-shadow: .2rem .2rem rgb(60, 58, 58);
 }
+
+.buttonHolder {
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttonHolder2 {
+    margin: auto;
+}
+
 .container {
     width: auto;
     height: auto;
     color: black;
+    font-family: 'GH';
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
+
+.container3 {
+    width: auto;
+    height: auto;
+    font-family: 'GH';
+    font-size: 3rem;
+    color: silver;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container4 {
+    width: auto;
+    height: auto;
+    font-family: 'GH';
+    font-size: 3rem;
+    color: silver;
+    padding-bottom: 5%;
+}
+
 .details {
     width: 30em;
-    font-family: 'QM';
+    font-family: 'GH';
     height: auto;
     margin: 1%;
-    background-color: rgb(137, 96, 96);
+    background-color: rgb(70, 76, 109);
     color: black;
     border: .1rem solid red;
     box-shadow: .1rem .1rem red;
@@ -87,187 +119,100 @@
     padding: 1%;
 }
 
-.dishTitle {
-    color: yellow;
-    font-style: italic;
-    font-size: 4.5rem;
-    text-shadow: .2rem .2rem black;
-    padding: 2%;
-} 
-
-.btn {
-    width: auto;
-    font-size: 2rem;
-    background-color: red;
-    color: antiquewhite;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 2px 2px;
-}
-.container2 {
-    width: auto;
-    height: auto;
-    font-family: cursive;
-    color: black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.btn2 {
-    width: 150px;
-    height: 50px;
-    background-color: red;
-    color:whitesmoke;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 2px 2px;
-    margin: 2px;
-    padding: 2px;
-}
-
-/* dish form */
 .details3 {
     width: auto;
     height: auto;
+    color: silver;
     margin: 5%;
     background-color: rgb(70, 76, 109);
     border: .1rem solid red;
     box-shadow: .2rem .2rem red;
-    border-radius: 5%;
-    padding: 4%;
-}
-
-/* login/reg */
-.container3 {
-    width: auto;
-    height: 100vh;
-    font-family: 'Graffiti';
-    color: silver;
-    display: flex;
-    justify-content: space-evenly;
     text-shadow: .15rem .15rem black;
+    border-radius: 5%;
+    padding: 2%;
 }
 
-.inputBox {
-    margin-left: 2%;
-    border-radius: 2%;
+.entryBox {
+    width: 80%;
+    height: 100%;
+    border-radius: 2rem;
+    background-color: transparent;
+    white-space: pre-wrap;
+    overflow: auto
 }
 
-/* showone */
-.container4 {
-    width: auto;
-    height: auto;
-    font-family: cursive;
-    color: black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-}
 .innerBox {
     align-content: center;
     padding-right: 80px;
-}
-.btn3 {
-    width: 150px;
-    height: 50px;
-    background-color: red;
-    color: whitesmoke;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 2px 2px;
-    margin: 2px;
-    padding: 2px;
-}
-.btn4 {
-    width: 200px;
-    height: 100px;
-    background-color: rgb(191, 20, 48);
-    color: whitesmoke;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 2px 2px;
-    margin-top: 10px;
-    padding: 2px;
+    font-size: 3rem;
 }
 
-/* API page */
-.details4 {
-    width: 800px;
-    height: auto;
-    margin-left: 350px;
-    margin-top: 50px;
-    background-color: rgb(135, 152, 222);
-    color: black;
-    border: 3px solid greenyellow;
-    box-shadow: 5px 5px;
-    border-radius: 5%;
-    padding: 20px;
-    align-self: center;
-}
-.container5 {
-    padding-top: 10px;
-    width: auto;
-    height: 2000px;
-    font-family: cursive;
-    color: black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-}
-.buttonHolder {
-    margin: 20px;
-    padding-left: 200px;
-    padding-right: 200px;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.inputBox {
+    margin-left: 3%;
+    border-radius: 2%;
+    width: 50%;
+    background-color: transparent;
+    white-space: pre-wrap;
+    overflow: auto
 }
 
-/* update form */
-.container6 {
-    width: auto;
-    height: 1200px;
-    font-family: cursive;
-    color: black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.details5 {
-    width: auto;
-    height: auto;
-    margin: 5px;
-    background-color: rgb(135, 152, 222);
-    color: black;
-    border: 3px solid greenyellow;
-    box-shadow: 5px 5px;
-    border-radius: 5%;
-    padding: 20px;
+.inputBox2 {
+    margin-left: 3%;
+    border-radius: 2%;
+    width: 50%;
+    color: white;
+    background-color: transparent;
+    white-space: pre-wrap;
+    overflow: auto
 }
 
-/* searchApi */
-.details6 {
-    width: auto;
-    height: auto;
-    margin: 20px;
-    background-color: rgb(137, 96, 96);
-    color: black;
-    border: 3px solid greenyellow;
-    box-shadow: 5px 5px;
-    border-radius: 5%;
-    font-weight: bold;
+.pageTitle {
+    color: rgb(205, 220, 182);
+    font-size: 4em;
+    text-shadow: .2rem .2rem red;
+    font-family: 'QM';
 }
-.container7 {
-    padding-top: 10px;
-    width: auto;
-    height: 3500px;
-    font-family: cursive;
-    color: black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+
+.slideLink {
+    color: red;
+    font-family: 'GH';
+    font-size: 3rem;
+    margin: 10%;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
