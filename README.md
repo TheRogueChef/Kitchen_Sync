@@ -1,0 +1,1 @@
+# Kitchen_Sync was designed to inspire the home cook who struggles with the daily question of what to make for dinner. It also allows the user to create a data base of recipes saved and created, as well as, modify any current recipes.
