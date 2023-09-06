@@ -13,7 +13,7 @@ const DisplayPage = (props) => {
             </Element>
             <br />
             <div className='pageTitle'>Recipe Library
-                <br />
+            <br />
             </div>
             <DisplayAllDishes dish={dish} setDayDish={setDish} />
             <br/>

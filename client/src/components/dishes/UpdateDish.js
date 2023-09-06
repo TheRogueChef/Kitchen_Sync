@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link,useNavigate, useParams } from 'react-router-dom';
+import { Image } from 'react-bootstrap';
+import kitchensink2 from '../images/kitchensink2.jpg';
 
 const Update = (props) => {
     const { id } = useParams();
@@ -44,6 +46,12 @@ const Update = (props) => {
 
     return(
         <div className='container3'>
+            <div className='logLeft'>
+                <Image className='dashPicL' src={kitchensink2} alt='...'/>
+                <p className= 'dishLogo'>My Kitchen Sync</p>
+                <br /><br />
+                <Link className='btn' to={'/displayPage'}>Home</Link>
+            </div>   
         <div className='details'>
             <h1 className='pageTitle'>Update Recipe</h1>
             <form onSubmit={updateDish}>
@@ -106,8 +114,6 @@ const Update = (props) => {
                 </p>
                 <br  /><br  />
                 <input className='btn' type='submit'/>
-                <br  /><br  />
-                <Link className='btn' to={'/displayPage'}>Home</Link>
                 <br  /><br  />
             </form>
         </div>

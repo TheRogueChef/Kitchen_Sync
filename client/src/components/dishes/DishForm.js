@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link,useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Image } from 'react-bootstrap';
+import kitchensink2 from '../images/kitchensink2.jpg';
 
 const DishForm = (props) => {
     const [errors, setErrors] = useState ({})
@@ -33,6 +35,12 @@ const DishForm = (props) => {
 
     return (
         <div className='container3'>
+            <div className='logLeft'>
+                <Image className='dashPicL' src={kitchensink2} alt='...'/>
+                <p className= 'dishLogo'>My Kitchen Sync</p>
+                <br /><br />
+                <Link className='btn' to={'/displayPage'}>Home</Link>
+            </div>
         <div className='details3'>
             <form onSubmit={submitHandler}>
                 <p className='pageTitle'>Create a New Dish</p>
@@ -90,7 +98,7 @@ const DishForm = (props) => {
                 <button className='btn' >Create</button>
             </form>
             <br  /><br  />
-                <Link className='btn' to={'/displayPage'}>Home</Link>
+                
         </div>
         </div>
     )

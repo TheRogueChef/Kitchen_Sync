@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import { Image } from 'react-bootstrap';
+import kitchensink2 from '../images/kitchensink2.jpg';
 
 const Register = (props) => {
     const [errors, setErrors] = useState({})
@@ -30,9 +32,13 @@ const Register = (props) => {
             })}
     
     return (
-        <div className='container3' style={{
-            backgroundImage:`transparent`
-        }}>
+        <div className='container3' >
+            <div className='logLeft'>
+                <Image className='dashPicL' src={kitchensink2} alt='...'/>
+                <p className= 'logo'>My Kitchen Sync</p>
+                <br  /> <br  />
+                <Link to={'/login'} style={{ color: `red`}}>Already have an account? Click here to login.</Link>
+            </div>
             <div className='details3'>
             <form onSubmit={submitHandler}>
                 <p className= 'pageTitle'>Register</p>
@@ -86,7 +92,7 @@ const Register = (props) => {
                 <br/>
             </form>
             <br/>
-        <Link to={'/login'} style={{ color: `red`}}>Already have an account</Link>
+        
         </div>
         </div>
     )}

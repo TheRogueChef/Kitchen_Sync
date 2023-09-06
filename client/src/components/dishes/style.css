@@ -17,9 +17,7 @@
 
 .dashLeft {
     font-family: cursive;
-    font-size: 6em;
-    font-weight: bolder;
-    font-style: italic;
+    font-size: 7em;
     font-family: 'QM';
     color: lightgray;
 }
@@ -49,8 +47,8 @@
 }
 
 .dashPic {
-    width: 40rem;
-    height: 15rem;
+    width: 35em;
+    height: 15em;
 }
 
 /*Everything Else*/
@@ -106,6 +104,18 @@
     padding-bottom: 5%;
 }
 
+.DADTitle{
+    text-decoration: underline;
+    font-style: italic;
+    color: rgb(205, 220, 182);
+    font-size: 2.5em;
+    text-shadow: .1rem .1rem red;
+}
+
+.DADInfo {
+    font-size: 2em;
+}
+
 .details {
     width: 30em;
     font-family: 'GH';
@@ -130,6 +140,15 @@
     text-shadow: .15rem .15rem black;
     border-radius: 5%;
     padding: 2%;
+}
+
+.dishLogo {
+    font-family: 'QM';
+    color: rgb(205, 220, 182);
+    border: solid .1rem red;
+    border-radius: 50%;
+    text-shadow: .2rem .2rem red;
+    font-size: 4em;
 }
 
 .entryBox {
@@ -164,6 +183,19 @@
     background-color: transparent;
     white-space: pre-wrap;
     overflow: auto
+}
+
+.logLeft {
+    margin-top: 3em;
+}
+
+.logo {
+    font-family: 'QM';
+    color: rgb(205, 220, 182);
+    border: solid .1rem red;
+    border-radius: 50%;
+    text-shadow: .2rem .2rem red;
+    font-size: 5em;
 }
 
 .pageTitle {
